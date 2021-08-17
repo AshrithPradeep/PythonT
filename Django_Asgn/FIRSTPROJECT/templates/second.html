@@ -1,0 +1,23 @@
+{%load static%}
+<head>
+    <title>Candidate Information Centre</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Candidate info</h1>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Address</th>
+    </thead>
+    {%for student in details%}
+    <tr>
+        <td>{{student.name}}</td>
+        <td>{{student.contact}}</td>
+        <td>{{student.address}}</td>
+    </tr>
+    {%endfor%}
+</table>    
+</body>
+</html>
